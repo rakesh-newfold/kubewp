@@ -52,6 +52,13 @@ The goal is to automate the creation of essential Kubernetes resources and simpl
    yarn install
    ```
 
+3. **Build Codebase**:
+   ```bash
+   npm run build
+   # or using yarn
+   yarn build
+   ```
+
 ## Usage
 
 1. Run the script:
