@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+#Others
+k8s-output/
+# TypeScript output
+dist/
+build/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# npm package lock
+package-lock.json
+
+# Yarn lock
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE specific files
+.vscode/
+.idea/
+
+# TypeScript specific
+*.tsbuildinfo
