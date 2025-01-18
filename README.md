@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="460" height="300" src="kubewp.svg">
+</p>
+
+
 # WP Kubernetes Configuration Generator
 
 KubeWp provides a script to generate Kubernetes YAML files for a WordPress application deployment. The script dynamically generates configuration files for various Kubernetes resources such as:
@@ -97,4 +102,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Handlebars](https://handlebarsjs.com/) for templating.
 - [Inquirer](https://www.npmjs.com/package/inquirer) for interactive command-line prompts.
-- Kubernetes documentation for providing resources and examples.
