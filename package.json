@@ -6,7 +6,7 @@
     "wp-k8s": "./dist/main.js"
   },
   "scripts": {
-    "start": "node dist/main.js",
+    "generate": "node dist/main.js",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
     "format": "prettier --write ./src",
     "check": "npm run format && npm run lint",

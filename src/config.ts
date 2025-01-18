@@ -1,6 +1,7 @@
 import { input, password } from '@inquirer/prompts';
 import { ConfigAnswers } from './types';
 import { createDirectoryIfNotExists } from './util';
+import path from 'node:path';
 
 export async function promptConfig(): Promise<ConfigAnswers> {
   const namespace = await input({
@@ -121,11 +122,17 @@ export async function promptConfig(): Promise<ConfigAnswers> {
 }
 
 export async function promptOutputDir(): Promise<string> {
+  // Default the output directory to 'kubewp' inside the current working directory
+  const defaultDir = path.join(process.cwd(), 'kubewp');
+
+  // Ask the user for the output directory, defaulting to 'kubewp' inside the current folder
   const outputDir = await input({
-    message: 'Enter output directory (default is current folder):',
-    default: process.cwd(),
+    message:
+      'Enter output directory (default is "kubewp" inside current folder):',
+    default: defaultDir,
   });
 
+  // Ensure the directory exists
   await createDirectoryIfNotExists(outputDir);
 
   return outputDir;
