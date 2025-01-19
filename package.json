@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "bin": {
-    "wp-k8s": "./dist/main.js"
+    "kubewp": "./dist/main.js"
   },
   "scripts": {
     "generate": "node dist/main.js",
@@ -17,8 +17,12 @@
     "type": "git",
     "url": "https://github.com/rakesh-newfold/kubewp.git"
   },
-  "keywords": [],
-  "author": "Rakesh Roy",
+  "keywords": [
+    "WordPress",
+    "Kubernetes",
+    "CLI"
+  ],
+  "author": "Rakesh Roy <rakesh.roy@newfold.com>",
   "license": "ISC",
   "description": "",
   "dependencies": {

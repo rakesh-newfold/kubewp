@@ -4,7 +4,7 @@ node_modules/
 #Others
 k8s-output/
 # TypeScript output
-dist/
+# dist/
 build/
 
 # Logs
