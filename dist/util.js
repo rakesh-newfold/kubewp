@@ -10,7 +10,8 @@ const promises_1 = __importDefault(require("fs/promises"));
 const node_path_1 = __importDefault(require("node:path"));
 const handlebars_1 = __importDefault(require("handlebars"));
 async function loadTemplate(templateName) {
-    const templatePath = node_path_1.default.resolve('stubs', `${templateName}.yaml`);
+    const currentDir = node_path_1.default.resolve(__dirname);
+    const templatePath = node_path_1.default.resolve(currentDir, 'stubs', `${templateName}.yaml`);
     return promises_1.default.readFile(templatePath, 'utf8');
 }
 async function renderTemplate(template, values) {

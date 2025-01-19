@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{deploymentName}}
+  namespace: {{namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{deploymentName}}
+  template:
+    metadata:
+      labels:
+        app: {{deploymentName}}
+    spec:
+      containers:
+        - name: {{deploymentName}}
+          image: {{wordpressImage}}
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: {{dbHost}}
+            - name: WORDPRESS_DB_USER
+              value: {{dbUser}}
+            - name: WORDPRESS_DB_NAME
+              value: {{dbName}}
+            - name: WORDPRESS_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-secrets
+                  key: WORDPRESS_DB_PASSWORD
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: wordpress-persistent-storage
+              mountPath: /var/www/html
+      volumes:
+        - name: wordpress-persistent-storage
+          persistentVolumeClaim:
+            claimName: wordpress-pvc

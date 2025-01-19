@@ -11,8 +11,14 @@
     "format": "prettier --write ./src",
     "check": "npm run format && npm run lint",
     "pre-build": "tsc",
-    "build": "npm run check && npm run pre-build"
+    "copy-stubs": "ncp ./stubs ./dist/stubs",
+    "build": "npm run check && npm run pre-build && npm run copy-stubs"
   },
+  "files": [
+    "dist",
+    "stubs",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/rakesh-newfold/kubewp.git"
@@ -41,6 +47,7 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
     "globals": "^15.14.0",
+    "ncp": "^2.0.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"

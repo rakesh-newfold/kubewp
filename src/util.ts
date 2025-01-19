@@ -3,7 +3,12 @@ import path from 'node:path';
 import Handlebars from 'handlebars';
 
 export async function loadTemplate(templateName: string): Promise<string> {
-  const templatePath = path.resolve('stubs', `${templateName}.yaml`);
+  const currentDir = path.resolve(__dirname);
+  const templatePath = path.resolve(
+    currentDir,
+    'stubs',
+    `${templateName}.yaml`,
+  );
   return fs.readFile(templatePath, 'utf8');
 }
 
