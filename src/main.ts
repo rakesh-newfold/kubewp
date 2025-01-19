@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+console.log('Welcome to kubewp CLI!');
 import { processTemplates } from './templateProcessor';
 import { ConfigAnswers } from './types';
 import { promptConfig, promptOutputDir } from './config';

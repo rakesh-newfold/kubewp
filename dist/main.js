@@ -1,5 +1,7 @@
+#!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+console.log('Welcome to kubewp CLI!');
 const templateProcessor_1 = require("./templateProcessor");
 const config_1 = require("./config");
 async function main() {
