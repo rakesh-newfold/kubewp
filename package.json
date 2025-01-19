@@ -1,5 +1,5 @@
 {
-  "name": "wpnetes",
+  "name": "kubewp",
   "version": "1.0.0",
   "main": "dist/main.js",
   "bin": {
@@ -13,8 +13,12 @@
     "pre-build": "tsc",
     "build": "npm run check && npm run pre-build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakesh-newfold/kubewp.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Rakesh Roy",
   "license": "ISC",
   "description": "",
   "dependencies": {
