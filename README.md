@@ -2,7 +2,6 @@
   <img width="460" height="300" src="kubewp.svg">
 </p>
 
-
 # WP Kubernetes Configuration Generator
 
 KubeWp provides a script to generate Kubernetes YAML files for a WordPress application deployment. The script dynamically generates configuration files for various Kubernetes resources such as:
@@ -17,6 +16,12 @@ KubeWp provides a script to generate Kubernetes YAML files for a WordPress appli
 - Ingress
 
 The goal is to automate the creation of essential Kubernetes resources and simplify the deployment of WordPress applications in a Kubernetes cluster.
+
+## Tutorial
+
+<p align="center">
+  <img width="744" height="466" src="kube.gif">
+</p>
 
 ## Features
 
@@ -46,6 +51,7 @@ The goal is to automate the creation of essential Kubernetes resources and simpl
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    # or using yarn
